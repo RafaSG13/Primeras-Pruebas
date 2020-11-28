@@ -19,7 +19,7 @@ public class Estrategia {
 	public static ArrayList<Beca> estrategia_DineroTotal(Beca[]becas) {
 		ArrayList<Beca> solucion=new ArrayList<Beca>();
 		Beca[] B=calcular_dinero_total(becas);
-		Quicksort.quicksort(B, 0, B.length-1);
+		Quicksort.quicksort(B, 1, B.length-1);
 		boolean[]meses=crearMeses();
 		for(int i=B.length-1;i>-1;i--) {
 			if(posible(meses,B[i].get_mes_inicio(),B[i].get_mes_fin())) {
